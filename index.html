@@ -147,13 +147,34 @@
         
         .success-message {
             display: none;
-            background: #48bb78;
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
             color: white;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 20px;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 30px;
+            line-height: 1.8;
+        }
+        
+        .success-message h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .success-message p {
             font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        
+        .success-message strong {
+            font-weight: 700;
+            display: block;
+            margin-top: 10px;
+        }
+        
+        .success-message a {
+            color: white;
+            text-decoration: underline;
         }
         
         .required {
@@ -244,7 +265,17 @@
             <button type="submit">Join Feast & Discourse</button>
             
             <div class="success-message" id="successMessage">
-                Thank you for signing up! We'll be in touch soon with details about our first gathering.
+                <h2>🎉 Welcome to Feast & Discourse!</h2>
+                <p>Thank you for signing up! We're excited to have you join our community.</p>
+                
+                <p><strong>What happens next:</strong></p>
+                <p>📱 You'll be added to our WhatsApp group within 24 hours</p>
+                <p>📅 Our first meeting is scheduled for <strong>February 20, 2025</strong></p>
+                <p>🍽️ Details about the location, time, and our first topic will be shared via WhatsApp</p>
+                
+                <p style="margin-top: 25px;">Have questions in the meantime? Email us at <a href="mailto:adedejayobami0@gmail.com">adedejayobami0@gmail.com</a></p>
+                
+                <p style="margin-top: 25px; font-style: italic;">See you soon!</p>
             </div>
         </form>
     </div>

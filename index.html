@@ -297,6 +297,7 @@
         const form = document.getElementById('signupForm');
         const successMessage = document.getElementById('successMessage');
         const submitBtn = document.getElementById('submitBtn');
+        const description = document.querySelector('.description');
         
         form.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -328,9 +329,10 @@
             .then(function(response) {
                 console.log('Response received:', response.ok);
                 if (response.ok) {
-                    // Hide form
+                    // Hide form and description
                     form.classList.add('hidden');
-                    console.log('Form hidden');
+                    description.classList.add('hidden');
+                    console.log('Form and description hidden');
                     
                     // Show success message
                     successMessage.classList.add('show');

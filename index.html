@@ -294,6 +294,11 @@
                 return;
             }
             
+            // Disable submit button to prevent double submission
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            
             const formData = new FormData(form);
             
             try {
@@ -306,13 +311,21 @@
                 });
                 
                 if (response.ok) {
+                    // Hide form and show success message
                     form.style.display = 'none';
                     successMessage.style.display = 'block';
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth' });
                 } else {
+                    const data = await response.json();
                     alert('Oops! There was a problem submitting your form. Please try again.');
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Join Feast & Discourse';
                 }
             } catch (error) {
                 alert('Oops! There was a problem submitting your form. Please try again.');
+                submitButton.disabled = false;
+                submitButton.textContent = 'Join Feast & Discourse';
             }
         });
     </script>
